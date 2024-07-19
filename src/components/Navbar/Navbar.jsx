@@ -1,25 +1,39 @@
-import React from 'react'
-import './Navbar.css'
+import React from "react";
+import "./Navbar.css";
+import search_icon from "../../assets/search_icon.svg";
+import bell_icon from "../../assets/bell_icon.svg";
+import logo from "../../assets/logo.png";
+import profile_img from "../../assets/profile_img.png";
+import caret_icon from "../../assets/caret_icon.svg";
 
-import logo from '../../assets/logo.png'
 const Navbar = () => {
   return (
-    <div className='navbar'>
+    <div className="navbar">
       <div className="navbar-left">
-        <img src={logo} alt="" />
+        <img src={logo} alt="Logo" />
         <ul>
           <li>Home</li>
-        <li>TV Shows</li>
-        <li>Movies</li>
-        <li>New & Popular</li>
-        <li>My List</li>
-        <li>Browse by languages</li></ul>
+          <li>TV Shows</li>
+          <li>Movies</li>
+          <li>New & Popular</li>
+          <li>My List</li>
+          <li>Browse by Languages</li>
+        </ul>
       </div>
       <div className="navbar-right">
-
+        <img src={search_icon} alt="Search Icon" className="icons" />
+        <p>Children</p>
+        <img src={bell_icon} alt="Bell Icon" className="icons" />
+        <div className="navbar-profile">
+          <img src={profile_img} alt="Profile" className="profile" />
+          <img src={caret_icon} alt="Caret Icon" className="profile" />
+          <div className="dropdown">
+            <p>Sign Out of Netflix</p>
+          </div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
